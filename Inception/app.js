@@ -9,4 +9,3 @@ const temp = React.createElement("h1", {}, "Injected by React");
 const root = ReactDOM.createRoot(document.querySelector(".root"));
 
 root.render(temp);
-root.render
