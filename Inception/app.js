@@ -1,11 +1,18 @@
-// const temp = window.document.querySelector(".root");
-// console.log(temp);
-// const heading = window.document.createElement("h1");
-// heading.innerText = "Injected by Javascript";
-// temp.appendChild(heading);
-// console.log(temp);
+const heading1 = React.createElement(
+  "h1",
+  { class: "heading " },
+  "Injected By React"
+);
+const heading2 = React.createElement(
+  "h2",
+  { class: "heading" },
+  "Welcome to React"
+);
 
-const temp = React.createElement("h1", {}, "Injected by React");
+const container = React.createElement("div", { class: "container" }, [
+  heading1,
+  heading2,
+]);
+
 const root = ReactDOM.createRoot(document.querySelector(".root"));
-
-root.render(temp);
+root.render(container);
