@@ -1,5 +1,5 @@
 import React from "react";
-const navbarTransition = "hover:bg-[#efefef] rounded transition duration-200";
+const navbarTransition = "hover:bg-white rounded transition duration-200";
 const Heading = () => {
   return (
     <div className="flex justify-between items-center px-11 py-6">

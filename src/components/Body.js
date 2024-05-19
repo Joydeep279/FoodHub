@@ -5,7 +5,9 @@ const Body = () => {
   return (
     <>
       <Search />
-      <Restrurent />
+      <div className="flex flex-wrap justify-center">
+        <Restrurent />
+      </div>
     </>
   );
 };
