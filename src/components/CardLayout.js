@@ -13,7 +13,7 @@ const Card = (props) => {
       />
       <div className=" flex flex-col px-2">
         <h1 className="font-bold font-mono text-lg  text-[#424242]">{name}</h1>
-        <span>{areaName}</span>
+        <span className="text-[#343a40]">{areaName}</span>
         <span className="font-bold">{avgRating}⭐</span>
       </div>
     </>
