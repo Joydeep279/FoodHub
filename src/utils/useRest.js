@@ -5,7 +5,7 @@ function useRest() {
 
   async function getData() {
     const apiData = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.1157917&lng=91.7085933"
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627"
     );
     const Restrurent = await apiData.json();
     setRestaurent(

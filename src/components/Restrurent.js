@@ -12,7 +12,7 @@ const Restrurent = () => {
     return data.map((data) => (
       <div
         key={data.info.id}
-        className="flex w-52 h-64 flex-col overflow-hidden  font-sans font-semibold  text-[#444444] antialiased m-5 hover:shadow-md transition-all duration-300 rounded-xl">
+        className="flex w-60 h-72 flex-col overflow-hidden  font-sans font-semibold  text-[#444444] antialiased m-5 hover:shadow-md transition-all duration-300 rounded-xl cursor-pointer">
         <Card props={data} />
       </div>
     ));
