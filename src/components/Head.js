@@ -3,8 +3,7 @@ const navbarTransition =
   "hover:bg-white rounded transition duration-200 cursor-pointer";
 const Heading = () => {
   return (
-    <div
-      className="flex justify-between items-center px-11 pb-10">
+    <div className="flex justify-between items-center px-11 pb-10">
       <img
         className="w-28 h-28"
         src="https://static.vecteezy.com/system/resources/previews/017/133/166/original/eps10-grey-chicken-burger-hamburger-abstract-solid-art-icon-or-logo-isolated-on-black-background-fast-food-symbol-in-a-simple-flat-trendy-modern-style-for-your-website-design-and-mobile-app-vector.jpg"
@@ -17,6 +16,11 @@ const Heading = () => {
         <li className={navbarTransition}>Cart</li>
       </ul>
       <div className="flex justify-center items-center gap-5">
+        <img
+          src="https://svgmix.com/uploads/phosphor-duotone/b92392-shopping-cart-duotone.svg"
+          alt="Cart-Logo"
+          className="w-10 h-10"
+        />
         <img
           className="w-10 h-10"
           src="https://img.icons8.com/ios-filled/100/737373/user-male-circle.png"
