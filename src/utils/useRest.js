@@ -14,6 +14,8 @@ function useRest() {
     setRestaurent(
       Restrurent.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
     );
+    cordinate.longitude = Restrurent.data.cards[11].card.card.lng;
+    cordinate.latitude = Restrurent.data.cards[11].card.card.lat;
   }
   useEffect(() => {
     getData();
