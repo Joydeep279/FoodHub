@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
-
+const cordinate = {
+  longitude: null,
+  latitude: null,
+};
 function useRest() {
   const [Restrurent, setRestaurent] = useState([]);
 
@@ -19,3 +22,6 @@ function useRest() {
   return Restrurent;
 }
 export default useRest;
+export function getCordinate() {
+  return cordinate;
+}
