@@ -1,8 +1,4 @@
 import { useEffect, useState } from "react";
-const cordinate = {
-  longitude: null,
-  latitude: null,
-};
 function useRest() {
   const [Restrurent, setRestaurent] = useState([]);
 
@@ -14,8 +10,6 @@ function useRest() {
     setRestaurent(
       Restrurent.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
     );
-    cordinate.longitude = Restrurent.data.cards[11].card.card.lng;
-    cordinate.latitude = Restrurent.data.cards[11].card.card.lat;
   }
   useEffect(() => {
     getData();
@@ -24,6 +18,3 @@ function useRest() {
   return Restrurent;
 }
 export default useRest;
-export function getCordinate() {
-  return cordinate;
-}
