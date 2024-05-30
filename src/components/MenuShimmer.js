@@ -9,7 +9,7 @@ const MenuShimmer = () => {
         <div className="h-6 w-44 bg-[#e9ecef] rounded-md"></div>
         <div className="h-8 bg-[#e9ecef] rounded-md"></div>
       </div>
-      <div className="w-24 h-5 bg-[#e9ecef] rounded-md"></div>
+      <div className="w-24 h-7 bg-[#e9ecef] rounded-md"></div>
     </div>
   ));
 };

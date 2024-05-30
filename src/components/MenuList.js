@@ -1,5 +1,4 @@
 const MenuList = (props) => {
-  console.log( props.props.card.info);
   const { imageId, name, price, description } = props.props.card.info;
 
   return (
@@ -12,7 +11,9 @@ const MenuList = (props) => {
         }
       />
       <div>
-        <h1 className="font-bold font-sans font text-2xl text-gray-700">{name}</h1>
+        <h1 className="font-bold font-sans font text-2xl text-gray-700">
+          {name}
+        </h1>
         <h1>{description}</h1>
       </div>
       <h2>Rs:{price / 100}</h2>
