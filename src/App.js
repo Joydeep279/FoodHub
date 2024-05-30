@@ -6,7 +6,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Menu from "./components/Menu";
 import About from "./components/About";
 import Contact from "./components/Contact";
-import Error from "./components/Errro";
+import Error from "./components/Error";
 import Instamart from "./components/Instamart";
 
 const AppLayout = () => {

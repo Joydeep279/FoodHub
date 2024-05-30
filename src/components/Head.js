@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import useStatus from "../utils/useStatus";
 
 const navbarTransition =
   "hover:bg-white rounded transition duration-200 cursor-pointer";
 
-const activeNavbar = "bg-white rounded transition duration-200 cursor-pointer";
 const Heading = () => {
+  const isOnline = useStatus();
+  console.log("loaded");
   return (
     <div className="flex justify-between items-center px-11 pb-10" key={12121}>
       <img
@@ -26,6 +28,7 @@ const Heading = () => {
         <Link to={"/instamart"} className={navbarTransition}>
           Insta
         </Link>
+        {isOnline ? <h1>online</h1> : <h1>Offline</h1>}
       </div>
       <div className="flex justify-center items-center gap-5">
         <img
