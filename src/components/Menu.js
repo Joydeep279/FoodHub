@@ -7,14 +7,14 @@ MenuList;
 const Menu = () => {
   const { id } = useParams();
   const menu = useMenu(id);
-  if (menu.length === 0) {
+  if (menu?.length === 0) {
     return <Shimmer />;
   } else {
     return (
       <div className="flex justify-center items-center flex-col gap-5">
         <h1 className="font-sans font-extrabold text-gray-800 text-2xl">MENU</h1>
 
-        {menu.map((res) => {
+        {menu?.map((res) => {
           return <MenuList props={res} key={res.card.info.id} />;
         })}
       </div>
