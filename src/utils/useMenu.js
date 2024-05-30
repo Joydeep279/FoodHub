@@ -8,7 +8,7 @@ const useMenu = (id) => {
       "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9715987&lng=77.5945627&restaurantId=" +id
     );
     const JSON = await data.json();
-    setApiData(JSON.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[3].card.card.itemCards);
+    setApiData(JSON.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards);
   }
   useEffect(() => {
     getMenuData(id);

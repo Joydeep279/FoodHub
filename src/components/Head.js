@@ -9,7 +9,7 @@ const Heading = () => {
   return (
     <div className="flex justify-between items-center px-11 pb-10" key={12121}>
       <img
-        className="w-28 h-28"
+        className="w-28 h-28 mix-blend-multiply"
         src="https://static.vecteezy.com/system/resources/previews/017/133/166/original/eps10-grey-chicken-burger-hamburger-abstract-solid-art-icon-or-logo-isolated-on-black-background-fast-food-symbol-in-a-simple-flat-trendy-modern-style-for-your-website-design-and-mobile-app-vector.jpg"
         alt="logo"
       />
@@ -24,7 +24,7 @@ const Heading = () => {
           Contact
         </Link>
         <Link to={"/instamart"} className={navbarTransition}>
-          InstaMart
+          Insta
         </Link>
       </div>
       <div className="flex justify-center items-center gap-5">
