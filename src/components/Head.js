@@ -17,7 +17,7 @@ const Heading = () => {
         src="https://static.vecteezy.com/system/resources/previews/017/133/166/original/eps10-grey-chicken-burger-hamburger-abstract-solid-art-icon-or-logo-isolated-on-black-background-fast-food-symbol-in-a-simple-flat-trendy-modern-style-for-your-website-design-and-mobile-app-vector.jpg"
         alt="logo"
       />
-      <div className="h-10 flex flex-row gap-10 text-[#666666] font-sans font-semibold text-4xl bg-[#F7F7F7] items-center px-2.5 py-1 rounded-md">
+      <div className="h-10 flex flex-row gap-10 text-[#666666] font-sans font-semibold text-4xl bg-[#F7F7F7] items-center  rounded-md">
         <Link to={"/"} className={navbarTransition}>
           Home
         </Link>
