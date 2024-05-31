@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import Heading from "./components/Head";
 import Body from "./components/Body";
@@ -8,13 +8,24 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
 import Instamart from "./components/Instamart";
+import UserContext from "./utils/useContext";
+import Footer from "./components/Footer";
 
 const AppLayout = () => {
+  const [user, setUser] = useState({
+    name: "Joydeep",
+    email: "joydeepnath279@gmail.com",
+  });
   return (
-    <React.Fragment>
+    <UserContext.Provider
+      value={{
+        user: user,
+        setUser: setUser,
+      }}>
       <Heading />
       <Outlet />
-    </React.Fragment>
+      <Footer />
+    </UserContext.Provider>
   );
 };
 

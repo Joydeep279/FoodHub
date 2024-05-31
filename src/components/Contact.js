@@ -1,5 +1,14 @@
 import React from "react";
+import UserContext from "../utils/useContext";
+import { useContext } from "react";
+
 const Contact = () => {
-  return <h1>This is a contact page</h1>;
+  const { user } = useContext(UserContext);
+  return (
+    <>
+      <span>This is a contact page</span>
+      <span>{user.email}</span>
+    </>
+  );
 };
 export default Contact;
