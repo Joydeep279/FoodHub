@@ -12,7 +12,7 @@ const Search = () => {
       </div>
       <div className="flex items-center gap-4">
         <img
-          className="w-5 h-5"
+          className="w-4 h-5"
           src="https://static-00.iconduck.com/assets.00/location-indicator-emoji-335x512-4ujynvwv.png"
           alt="location-image"
         />

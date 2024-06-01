@@ -1,13 +1,12 @@
 import { useContext, useEffect } from "react";
 import { Cordinate, Loc, RestData } from "./useContext";
+import API from "./API";
 function useRest() {
   const { setRest } = useContext(RestData);
   const { setCordinate } = useContext(Cordinate);
   const { setPlace } = useContext(Loc);
   async function getData() {
-    const apiData = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627"
-    );
+    const apiData = await fetch(API[Math.floor(Math.random() * 10 + 1)]);
     const Restrurent = await apiData.json();
     setRest(
       Restrurent.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
