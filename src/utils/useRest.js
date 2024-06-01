@@ -6,7 +6,7 @@ function useRest() {
   const { setCordinate } = useContext(Cordinate);
   const { setPlace } = useContext(Loc);
   async function getData() {
-    const apiData = await fetch(API[Math.floor(Math.random() * 10 + 1)]);
+    const apiData = await fetch(API[Math.floor(Math.random() * 10)]);
     const Restrurent = await apiData.json();
     setRest(
       Restrurent.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
