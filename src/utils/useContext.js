@@ -4,4 +4,15 @@ const UserContext = createContext({
   user: "User",
   email: "example123@gmail.com",
 });
+
+export const RestData = createContext({
+  Rest: null,
+});
+export const Cordinate = createContext({
+  cordinate: {},
+});
+export const Loc = createContext({
+  place: "",
+  setPlace:null,
+});
 export default UserContext;

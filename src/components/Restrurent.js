@@ -1,16 +1,14 @@
-import React from "react";
-import useRest from "../utils/useRest";
+import React, { useContext } from "react";
 import Card from "./CardLayout";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
-
+import { RestData } from "../utils/useContext";
 const Restrurent = () => {
-  const data = useRest();
-
-  if (data.length === 0) {
+  const { Rest } = useContext(RestData);
+  if (Rest.length === 0) {
     return <Shimmer />;
   } else {
-    return data.map((data) => (
+    return Rest.map((data) => (
       <Link
         to={"/restruent/" + data?.info?.id}
         key={data?.info?.id}

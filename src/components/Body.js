@@ -1,7 +1,9 @@
 import React from "react";
 import Search from "./Search";
 import Restrurent from "./Restrurent";
+import useRest from "../utils/useRest";
 const Body = () => {
+  useRest();
   return (
     <>
       <Search />

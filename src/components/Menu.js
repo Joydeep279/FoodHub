@@ -1,12 +1,15 @@
 import { useParams } from "react-router-dom";
-import React from "react";
+import React, { useContext } from "react";
 import useMenu from "../utils/useMenu";
 import MenuList from "./MenuList";
 import MenuShimmer from "./MenuShimmer";
-MenuList;
+import { Cordinate } from "../utils/useContext";
 const Menu = () => {
+  const { cordinate } = useContext(Cordinate);
+  const lat = cordinate.latitude;
+  const lng = cordinate.longitude;
   const { id } = useParams();
-  const menu = useMenu(id);
+  const menu = useMenu(id,lat,lng);
   if (menu?.length === 0) {
     return (
       <div className="flex justify-center items-center flex-col gap-5">
