@@ -6,7 +6,7 @@ const Card = (props) => {
   return (
     <>
       <img
-        className="w-[100%] h-[60%] rounded-md"
+        className="w-[100%] h-[60%] rounded-2xl"
         src={
           "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
           cloudinaryImageId
