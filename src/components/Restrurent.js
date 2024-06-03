@@ -3,8 +3,12 @@ import Card from "./CardLayout";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import { RestData } from "../utils/useContext";
+import useRest from "../utils/useRest";
 const Restrurent = () => {
   const { Rest } = useContext(RestData);
+
+  useRest();
+
   if (Rest.length === 0) {
     return <Shimmer />;
   } else {
@@ -20,3 +24,5 @@ const Restrurent = () => {
 };
 
 export default Restrurent;
+// add cart=> dispature action => reducer function => update the slice of the store.
+

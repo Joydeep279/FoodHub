@@ -2,11 +2,15 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useStatus";
 import UserContext from "../utils/useContext";
+import { useSelector } from "react-redux";
+import { addItem } from "../utils/cartSlice";
 
 const navbarTransition =
   "hover:bg-white rounded transition duration-200 cursor-pointer";
 
 const Heading = () => {
+  const cartItem = useSelector((store) => store.cart.items);
+  console.log(cartItem);
   const { user } = useContext(UserContext);
   const isOnline = useOnline();
   return (
@@ -42,11 +46,7 @@ const Heading = () => {
         ) : (
           <h1 className="font-bold text-2xl text-[#555555]">🔴</h1>
         )}
-        <img
-          src="https://svgmix.com/uploads/phosphor-duotone/b92392-shopping-cart-duotone.svg"
-          alt="Cart-Logo"
-          className="w-10 h-10"
-        />
+        <h1>Cart{cartItem.length}</h1>
         <img
           className="w-10 h-10"
           src="https://img.icons8.com/ios-filled/100/737373/user-male-circle.png"

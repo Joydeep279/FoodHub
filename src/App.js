@@ -10,7 +10,8 @@ import Error from "./components/Error";
 import Instamart from "./components/Instamart";
 import UserContext, { RestData, Cordinate, Loc } from "./utils/useContext";
 import Footer from "./components/Footer";
-
+import { Provider } from "react-redux";
+import store from "./utils/Store";
 const AppLayout = () => {
   const [user, setUser] = useState({
     name: "Joydeep",
@@ -23,27 +24,29 @@ const AppLayout = () => {
   });
   const [place, setPlace] = useState("India");
   return (
-    <UserContext.Provider
-      value={{
-        user: user,
-        setUser: setUser,
-      }}>
-      <Heading />
-      <RestData.Provider
+    <Provider store={store}>
+      <UserContext.Provider
         value={{
-          Rest: Rest,
-          setRest: setRest,
-          setCordinate: setCordinate,
+          user: user,
+          setUser: setUser,
         }}>
-        <Cordinate.Provider
-          value={{ cordinate: Location, setCordinate: setCordinate }}>
-          <Loc.Provider value={{ place:place, setPlace }}>
-            <Outlet />
-          </Loc.Provider>
-        </Cordinate.Provider>
-      </RestData.Provider>
-      <Footer />
-    </UserContext.Provider>
+        <Heading />
+        <RestData.Provider
+          value={{
+            Rest: Rest,
+            setRest: setRest,
+            setCordinate: setCordinate,
+          }}>
+          <Cordinate.Provider
+            value={{ cordinate: Location, setCordinate: setCordinate }}>
+            <Loc.Provider value={{ place: place, setPlace }}>
+              <Outlet />
+            </Loc.Provider>
+          </Cordinate.Provider>
+        </RestData.Provider>
+        <Footer />
+      </UserContext.Provider>
+    </Provider>
   );
 };
 
