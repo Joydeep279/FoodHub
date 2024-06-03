@@ -9,7 +9,7 @@ const Menu = () => {
   const lat = cordinate.latitude;
   const lng = cordinate.longitude;
   const { id } = useParams();
-  const menu = useMenu(id,lat,lng);
+  const menu = useMenu(id, lat, lng);
   if (menu?.length === 0) {
     return (
       <div className="flex justify-center items-center flex-col gap-5">

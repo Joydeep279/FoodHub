@@ -1,6 +1,12 @@
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
+
 const MenuList = (props) => {
   const { imageId, name, price, description } = props.props.card.info;
-
+  const dispatch = useDispatch();
+  const handleItem = () => {
+    dispatch(addItem("Mango"));
+  };
   return (
     <div className="flex w-3/5 flex-row  gap-10 pr-5 rounded-md items-center justify-between bg-[#F7F7F7]">
       <img
@@ -17,6 +23,12 @@ const MenuList = (props) => {
         <h1>{description}</h1>
       </div>
       <h2>Rs:{price / 100}</h2>
+      <button
+        onClick={() => {
+          handleItem();
+        }}>
+        Add To Card
+      </button>
     </div>
   );
 };
