@@ -17,7 +17,7 @@ const Search = () => {
           alt="location-image"
         />
         <span className="pr-28 text-[#666666] text-base font-semibold font-sans">
-          {place.toUpperCase()}
+          {place?.toUpperCase()}
         </span>
       </div>
     </div>

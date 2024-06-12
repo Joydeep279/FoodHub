@@ -6,15 +6,16 @@ function useRest() {
   const { setCordinate } = useContext(Cordinate);
   const { setPlace } = useContext(Loc);
   async function getData() {
-    const apiData = await fetch(API[Math.floor(Math.random() * 10)]);
-    const Restrurent = await apiData.json();
+    const apiData = await fetch(API[Math?.floor(Math?.random() * 10)]);
+    const Restrurent = await apiData?.json();
     setRest(
-      Restrurent.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
+      Restrurent?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants
     );
-    const lat = Restrurent.data.cards[11].card.card.lat;
-    const lng = Restrurent.data.cards[11].card.card.lng;
+    const lat = Restrurent?.data?.cards[11]?.card?.card?.lat;
+    const lng = Restrurent?.data?.cards[11]?.card?.card?.lng;
     setCordinate({ latitude: lat, longitude: lng });
-    setPlace(Restrurent.data.cards[11].card.card.citySlug);
+    setPlace(Restrurent?.data?.cards[11]?.card?.card?.citySlug);
   }
   useEffect(() => {
     getData();

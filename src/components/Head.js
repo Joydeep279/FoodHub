@@ -3,14 +3,12 @@ import { Link } from "react-router-dom";
 import useOnline from "../utils/useStatus";
 import UserContext from "../utils/useContext";
 import { useSelector } from "react-redux";
-import { addItem } from "../utils/cartSlice";
 
 const navbarTransition =
   "hover:bg-white rounded transition duration-200 cursor-pointer";
 
 const Heading = () => {
   const cartItem = useSelector((store) => store.cart.items);
-  console.log(cartItem);
   const { user } = useContext(UserContext);
   const isOnline = useOnline();
   return (

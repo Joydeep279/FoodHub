@@ -9,10 +9,10 @@ const Restrurent = () => {
 
   useRest();
 
-  if (Rest.length === 0) {
+  if (Rest?.length === 0) {
     return <Shimmer />;
   } else {
-    return Rest.map((data) => (
+    return Rest?.map((data) => (
       <Link
         to={"/restruent/" + data?.info?.id}
         key={data?.info?.id}

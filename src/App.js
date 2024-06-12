@@ -44,7 +44,7 @@ const AppLayout = () => {
             </Loc.Provider>
           </Cordinate.Provider>
         </RestData.Provider>
-        <Footer />
+        <Footer></Footer>
       </UserContext.Provider>
     </Provider>
   );

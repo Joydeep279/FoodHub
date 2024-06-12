@@ -4,7 +4,10 @@ const UserContext = createContext({
   user: "User",
   email: "example123@gmail.com",
 });
-
+export const theme = createContext({
+  currentTheme: "",
+  setTheme: null,
+});
 export const RestData = createContext({
   Rest: null,
 });
@@ -13,6 +16,6 @@ export const Cordinate = createContext({
 });
 export const Loc = createContext({
   place: "",
-  setPlace:null,
+  setPlace: null,
 });
 export default UserContext;
