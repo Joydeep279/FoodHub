@@ -21,16 +21,16 @@ const Heading = () => {
         alt="logo"
       />
       <div className="px-5 py-5 h-10 flex flex-row gap-10 text-[#666666] font-sans font-semibold text-3xl bg-[#F7F7F7] items-center  rounded-md">
-        <Link to={"/"} className={navbarTransition}>
+        <Link to={"/"} className={navbarTransition} key={"home"}>
           Home
         </Link>
-        <Link to={"/about"} className={navbarTransition}>
+        <Link to={"/about"} className={navbarTransition} key={"about"}>
           About
         </Link>
-        <Link to={"/contact"} className={navbarTransition}>
+        <Link to={"/contact"} className={navbarTransition} key={"contact"}>
           Contact
         </Link>
-        <Link to={"/instamart"} className={navbarTransition}>
+        <Link to={"/instamart"} className={navbarTransition} key={"insta"}>
           Insta
         </Link>
       </div>
@@ -44,12 +44,12 @@ const Heading = () => {
         ) : (
           <h1 className="font-bold text-2xl text-[#555555]">🔴</h1>
         )}
-        <Link
-          to={"./cart"}
-          className="p-0 m-0 flex flex-col items-center justify-start">
-          <span className="text-end font-bold text-2xl">{cartItem.length}</span>
+        <Link to={"./cart"} className="p-0 m-0 flex flex-col items-center">
+          <span className="font-semibold relative top-[2.37rem]">
+            {cartItem.length}
+          </span>
           <img
-            className="w-10 h-10"
+            className="w-14 h-16"
             src="https://svgmix.com/uploads/phosphor-duotone/b92392-shopping-cart-duotone.svg"
             alt="Cart"
           />

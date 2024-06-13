@@ -21,7 +21,9 @@ const Cart = () => {
       )}
       <div className="flex flex-row items-center justify-center flex-wrap gap-5">
         {cardItems.map((items) => (
-          <div key={items.id}>
+          <div
+            key={items.id}
+            className="flex flex-col items-center justify-center">
             <CartLayout items={items} />
           </div>
         ))}
