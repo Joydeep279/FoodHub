@@ -44,7 +44,7 @@ const Heading = () => {
         ) : (
           <h1 className="font-bold text-2xl text-[#555555]">🔴</h1>
         )}
-        <h1>Cart{cartItem.length}</h1>
+        <Link to={"./cart"}>Cart{cartItem.length}</Link>
         <img
           className="w-10 h-10"
           src="https://img.icons8.com/ios-filled/100/737373/user-male-circle.png"
