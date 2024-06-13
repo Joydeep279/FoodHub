@@ -44,10 +44,12 @@ const Heading = () => {
         ) : (
           <h1 className="font-bold text-2xl text-[#555555]">🔴</h1>
         )}
-        <Link to={"./cart"}>
-          <span>{cartItem.length}</span>
+        <Link
+          to={"./cart"}
+          className="p-0 m-0 flex flex-col items-center justify-start">
+          <span className="text-end font-bold text-2xl">{cartItem.length}</span>
           <img
-           className="w-10 h-10"
+            className="w-10 h-10"
             src="https://svgmix.com/uploads/phosphor-duotone/b92392-shopping-cart-duotone.svg"
             alt="Cart"
           />
