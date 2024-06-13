@@ -1,8 +1,8 @@
 const CartLayout = (props) => {
-  const { imageId, name, price, description } = props.items;
+  const { imageId, name, price, category, id } = props.items;
 
   return (
-    <>
+    <div className="flex flex-col items-center justify-center" key={id}>
       <img
         className="w-48 h-28 rounded-lg"
         src={
@@ -11,13 +11,11 @@ const CartLayout = (props) => {
         }
       />
       <div>
-        <h1 className="font-bold font-sans font text-2xl text-gray-700">
-          {name}
-        </h1>
-        <h1>{description}</h1>
+        <h1 className="font-sans font text-gray-700">{name}</h1>
+        <h1>{category}</h1>
       </div>
       <h2>Rs:{price / 100}</h2>
-    </>
+    </div>
   );
 };
 export default CartLayout;

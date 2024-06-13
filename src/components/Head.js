@@ -44,7 +44,14 @@ const Heading = () => {
         ) : (
           <h1 className="font-bold text-2xl text-[#555555]">🔴</h1>
         )}
-        <Link to={"./cart"}>Cart{cartItem.length}</Link>
+        <Link to={"./cart"}>
+          <span>{cartItem.length}</span>
+          <img
+           className="w-10 h-10"
+            src="https://svgmix.com/uploads/phosphor-duotone/b92392-shopping-cart-duotone.svg"
+            alt="Cart"
+          />
+        </Link>
         <img
           className="w-10 h-10"
           src="https://img.icons8.com/ios-filled/100/737373/user-male-circle.png"
