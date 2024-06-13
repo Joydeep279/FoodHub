@@ -4,9 +4,8 @@ import { clearCart } from "../utils/cartSlice";
 const Cart = () => {
   const cardItems = useSelector((store) => store.cart.items);
   const dispatch = useDispatch();
-  console.log(cardItems.length);
   return (
-    <div className="flex flex-wrap justify-center">
+    <div className="flex flex-wrap justify-center flex-col">
       {cardItems.length !== 0 ? (
         <button
           className="w-24 h-10 align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-2 px-5 rounded-lg border border-gray-900 text-gray-900 hover:opacity-75 focus:ring focus:ring-gray-300 active:opacity-[0.85]"
@@ -22,7 +21,9 @@ const Cart = () => {
       )}
       <div className="flex flex-row items-center justify-center flex-wrap gap-5">
         {cardItems.map((items) => (
-          <CartLayout items={items} />
+          <div key={items.id}>
+            <CartLayout items={items} />
+          </div>
         ))}
       </div>
     </div>

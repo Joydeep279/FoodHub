@@ -2,7 +2,7 @@ const CartLayout = (props) => {
   const { imageId, name, price, category, id } = props.items;
 
   return (
-    <div className="flex flex-col items-center justify-center" key={id}>
+    <div className="flex flex-col items-center justify-center">
       <img
         className="w-48 h-28 rounded-lg"
         src={
