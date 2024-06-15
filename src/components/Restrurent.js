@@ -9,6 +9,7 @@ const Restrurent = () => {
   const { Rest } = useContext(RestData);
   if (count === 0) {
     useRest();
+    count++;
   }
 
   if (Rest?.length === 0) {
