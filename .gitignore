@@ -3,5 +3,4 @@ dist
 .parcel-cache
 package-lock.json
 package.json
-.postcssrc
-tailwind.config.js
+coverage

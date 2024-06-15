@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 const navbarTransition =
   "hover:bg-white rounded transition duration-200 cursor-pointer";
 
-const Heading = () => {
+const Header = () => {
   const cartItem = useSelector((store) => store.cart.items);
   const { user } = useContext(UserContext);
   const isOnline = useOnline();
@@ -16,6 +16,7 @@ const Heading = () => {
       className="flex justify-between items-center px-10 flex-wrap"
       key={12121}>
       <img
+        data-testid="logo"
         className="w-28 h-28 mix-blend-multiply"
         src="https://static.vecteezy.com/system/resources/previews/017/133/166/original/eps10-grey-chicken-burger-hamburger-abstract-solid-art-icon-or-logo-isolated-on-black-background-fast-food-symbol-in-a-simple-flat-trendy-modern-style-for-your-website-design-and-mobile-app-vector.jpg"
         alt="logo"
@@ -38,6 +39,7 @@ const Heading = () => {
       <div className="flex justify-center items-center gap-5 mix-blend-multiply">
         {isOnline ? (
           <img
+            data-testId="status"
             src="https://static.wixstatic.com/media/4ea17e_a962cd2cf30b4c01a8d76b9629b42148~mv2.gif"
             className="w-10 h-10"
           />
@@ -45,7 +47,7 @@ const Heading = () => {
           <h1 className="font-bold text-2xl text-[#555555]">🔴</h1>
         )}
         <Link to={"./cart"} className="p-0 m-0 flex flex-col items-center">
-          <span className="font-semibold relative top-[2.37rem]">
+          <span data-testid="cartLength" className="font-semibold relative top-[2.37rem]">
             {cartItem.length}
           </span>
           <img
@@ -66,4 +68,4 @@ const Heading = () => {
     </div>
   );
 };
-export default Heading;
+export default Header;

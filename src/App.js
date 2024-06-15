@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
-import Heading from "./components/Head";
+import Header from "./components/Head";
 import Body from "./components/Body";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Menu from "./components/Menu";
@@ -31,7 +31,7 @@ const AppLayout = () => {
           user: user,
           setUser: setUser,
         }}>
-        <Heading />
+        <Header />
         <RestData.Provider
           value={{
             Rest: Rest,
