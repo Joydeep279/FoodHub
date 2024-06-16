@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
-import Header from "./components/Head";
+import Header from "./components/Header";
 import Body from "./components/Body";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Menu from "./components/Menu";
@@ -28,7 +28,8 @@ const AppLayout = () => {
     <Provider store={store}>
       <UserContext.Provider
         value={{
-          user: user,
+          user: user.name,
+          email: user.email,
           setUser: setUser,
         }}>
         <Header />

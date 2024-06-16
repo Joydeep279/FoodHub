@@ -21,7 +21,7 @@ const Header = () => {
         src="https://static.vecteezy.com/system/resources/previews/017/133/166/original/eps10-grey-chicken-burger-hamburger-abstract-solid-art-icon-or-logo-isolated-on-black-background-fast-food-symbol-in-a-simple-flat-trendy-modern-style-for-your-website-design-and-mobile-app-vector.jpg"
         alt="logo"
       />
-      <div className="px-5 py-5 h-10 flex flex-row gap-10 text-[#666666] font-sans font-semibold text-3xl bg-[#F7F7F7] items-center  rounded-md">
+      <div className="p-7 h-10 flex flex-row gap-10 text-[#666666] font-sans font-semibold text-3xl bg-[#F7F7F7] items-center  rounded-md">
         <Link to={"/"} className={navbarTransition} key={"home"}>
           Home
         </Link>
@@ -47,7 +47,9 @@ const Header = () => {
           <h1 className="font-bold text-2xl text-[#555555]">🔴</h1>
         )}
         <Link to={"./cart"} className="p-0 m-0 flex flex-col items-center">
-          <span data-testid="cartLength" className="font-semibold relative top-[2.37rem]">
+          <span
+            data-testid="cartLength"
+            className="font-semibold relative top-[2.37rem]">
             {cartItem.length}
           </span>
           <img
@@ -62,7 +64,7 @@ const Header = () => {
           alt="user-male-circle"
         />
         <button className="bg-[#8E8E93] px-5 py-0.5 rounded text-white">
-          {user.name}
+          {user}
         </button>
       </div>
     </div>
