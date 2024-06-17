@@ -2,13 +2,15 @@ import { useContext } from "react";
 import UserContext from "../utils/useContext";
 import emailLogo from "../assets/img/Email.png";
 import phoneicon from "../assets/img/icon.png";
+import githubIcon from "../assets/img/icons8-github.gif";
+import linkedinIcon from "../assets/img/icons8-linkedin-2.gif";
 const Footer = () => {
   const childTailwindConfig = "flex flex-col gap-5";
   const { email } = useContext(UserContext);
   return (
     <div className="flex flex-col ">
       <div className="flex justify-between ml-28 mr-60 mt-10 mb-10 p-5 border-b">
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-5">
           <h1 className="text-[#3A86FF] text-4xl font-sans">.Food Hub</h1>
           <span className="text-wrap">
             Funding freemium long tail hypotheses<br></br> first mover advantage
@@ -21,6 +23,16 @@ const Footer = () => {
           <div className="flex gap-4 items-center">
             <img src={phoneicon} className="w-5 h-5" />
             <span>+91 6001515279</span>
+          </div>
+          <div className="flex gap-5">
+            <a className="w-5 h-5" href="https://github.com/Joydeep279">
+              <img src={githubIcon} alt="Github" />
+            </a>
+            <a
+              className="w-5 h-5"
+              href="https://linkedin.com/in/joydeep-nath007">
+              <img src={linkedinIcon} />
+            </a>
           </div>
         </div>
         <div className={childTailwindConfig}>
