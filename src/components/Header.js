@@ -39,7 +39,7 @@ const Header = () => {
       <div className="flex justify-center items-center gap-5 mix-blend-multiply">
         {isOnline ? (
           <img
-            data-testId="status"
+            data-testid="status"
             src="https://static.wixstatic.com/media/4ea17e_a962cd2cf30b4c01a8d76b9629b42148~mv2.gif"
             className="w-10 h-10"
           />

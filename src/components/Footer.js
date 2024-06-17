@@ -8,7 +8,7 @@ const Footer = () => {
   const childTailwindConfig = "flex flex-col gap-5";
   const { email } = useContext(UserContext);
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col mt-auto">
       <div className="flex justify-between ml-28 mr-60 mt-10 mb-10 p-5 border-b">
         <div className="flex flex-col gap-5">
           <h1 className="text-[#3A86FF] text-4xl font-sans">.Food Hub</h1>
@@ -25,11 +25,15 @@ const Footer = () => {
             <span>+91 6001515279</span>
           </div>
           <div className="flex gap-5">
-            <a className="w-5 h-5" href="https://github.com/Joydeep279">
+            <a
+              className="w-10 h-10"
+              target="_blank"
+              href="https://github.com/Joydeep279">
               <img src={githubIcon} alt="Github" />
             </a>
             <a
-              className="w-5 h-5"
+              className="w-10 h-10"
+              target="_blank"
               href="https://linkedin.com/in/joydeep-nath007">
               <img src={linkedinIcon} />
             </a>
